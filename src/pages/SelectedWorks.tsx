@@ -6,39 +6,39 @@ import './ScrollStack.css';
 const projects = [
   {
     id: "001",
-    title: "Enterprise Resource Architecture",
-    stack: "React / Node.js / Firebase / Firestore",
-    description: "A full-stack ERP engine automating multi-currency invoicing, inventory logic, and international tax compliance for distributed teams.",
-    links: { live: "https://erpbeta.netlify.app", code: "#" },
+    title: "PulmoScan — AI Medical Imaging",
+    stack: "Python / PyTorch / ResNet-18 / CNN / Medical Imaging",
+    description: "An AI-powered medical imaging project that uses deep learning to classify lung CT scans, supporting early detection of pulmonary conditions. Fine-tuned a ResNet-18 CNN model achieving over 92% classification accuracy. Received copyright registration.",
+    links: { live: "https://github.com/piyushbadgujar05/Pulmoscan_o1", code: "https://github.com/piyushbadgujar05/Pulmoscan_o1" },
     image: "/p1.png",
-    cta: "Live Project"
+    cta: "View on GitHub"
   },
   {
     id: "002",
-    title: "Geospatial Workforce Analytics",
-    stack: "React / Redux / Google Maps API/ Firebase",
-    description: "Real-time tracking system implementing location-based validation protocols and live route visualization for workforce monitoring.",
-    links: { live: "#", code: "#" },
+    title: "TestMind AI — Intelligent Test Generation",
+    stack: "Python / FastAPI / FAISS / Sentence Transformers / RAG / NVIDIA NIM",
+    description: "An AI-powered test case generation system using historical QA documents for RAG-based retrieval. Assists with test generation, project analysis, risk identification, and coverage-gap analysis through a retrieval-augmented generation pipeline.",
+    links: { live: "https://github.com/piyushbadgujar05/TestMind-AI", code: "https://github.com/piyushbadgujar05/TestMind-AI" },
     image: "/p2.png",
-    cta: "Live Project"
+    cta: "View on GitHub"
   },
   {
     id: "003",
-    title: "OrderEase: Real-time online table food ordering system",
-    stack: "React / Firebase / Node.js",
-    description: "A real-time restaurant table ordering system that allows customers to place food orders directly from their table while enabling admins to manage menus, waiters, and assign waiters to customers for seamless service coordination.",
-    links: { live: "https://github.com/MAHESHPPAI/OrderEase", code: "#" },
-    image: "./p3.png",
-    cta: "View on Github"
+    title: "Save & Serve — Food Donation Platform",
+    stack: "React.js / Node.js / Express.js / MongoDB",
+    description: "A food donation platform connecting donors, receivers, and volunteers to streamline food donation management and distribution. Features role-based authentication, donation listing, request management, and REST API integration. Copyright registered.",
+    links: { live: "https://github.com/piyushbadgujar05/SaveAndServe", code: "https://github.com/piyushbadgujar05/SaveAndServe" },
+    image: "/p3.png",
+    cta: "View on GitHub"
   },
   {
     id: "004",
-    title: "BusBuddy: Transit Management Logic",
-    stack: "React / Firebase / Springboot / ngrok",
-    description: "A real-time campus transportation platform that enables students to book seats and track buses live, drivers to stream GPS data during journeys, and transport officers to manage fleet availability, monitoring, and notifications seamlessly.",
-    links: { live: "https://github.com/MAHESHPPAI/Busbuddy-latest", code: "#" },
-    image: "./p4.png",
-    cta: "View on Github"
+    title: "Waves Classes — Educational Website",
+    stack: "HTML / CSS / JavaScript / GSAP / Parallax",
+    description: "A responsive educational website for a coaching institute, enhanced with GSAP animations, parallax scrolling effects, and a video gallery. Built to provide a modern, engaging digital presence for students and faculty.",
+    links: { live: "https://wavesclasses.in/", code: "https://github.com/piyushbadgujar05" },
+    image: "/p4.png",
+    cta: "Visit Website"
   },
 ];
 

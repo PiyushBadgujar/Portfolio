@@ -1,22 +1,19 @@
-# MAHESH P PAI — Portfolio
+# Piyush Badgujar — Developer Portfolio
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mahesh-p-pai-b0987b2a8/)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MAHESHPPAI)
-[![Portfolio](https://img.shields.io/badge/Live_Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://maheshppai-v1.netlify.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/piyush-badgujar-78631b287)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/piyushbadgujar05)
 
-A high-performance personal portfolio showcasing full-stack engineering expertise, architectural design, and a focus on transforming complex problems into elegant, automated solutions.
-
+A high-performance personal developer portfolio showcasing full-stack engineering expertise, AI/ML systems, and modern cinematic web aesthetics.
 
 ## 🚀 Overview
 
-This portfolio is a modern React-based web application built with a focus on immersive user experience (UX) and cinematic aesthetics. It features advanced scroll animations, interactive components, and a "Deep Dark" modernist design system.
+This portfolio is built with React, TypeScript, and Vite, featuring immersive animations, interactive particle effects, responsive layouts, and a curated dark/light modernist aesthetic.
 
-### Key Features
-- **Immersive Interactivity**: Splash cursor effects, vector bridge interactions, and fluid animations.
-- **Stack-based Project Display**: A custom-engineered scroll stack for showcasing selected works with CSS-in-JS and GSAP power.
-- **Parallax Storytelling**: Multi-layered parallax reveals and scroll-triggered content transitions.
-- **Responsive Architecture**: Fully optimized for mobile, tablet, and desktop viewports.
-- **Mechanical UX**: Integrated smooth-scrolling using Lenis for a tactile feel.
+### Featured Projects
+- **PulmoScan — AI Medical Imaging**: AI-powered lung CT scan classification using a fine-tuned ResNet-18 CNN model (>92% accuracy, copyright registered).
+- **TestMind AI — Intelligent Test Generation**: QA test case generator powered by RAG retrieval pipelines, FAISS, and NVIDIA NIM.
+- **Save & Serve — Food Donation Platform**: Full-stack MERN application connecting donors and receivers with role-based auth and REST APIs.
+- **Waves Classes — Educational Website**: Interactive web application featuring GSAP parallax animations and responsive course showcases.
 
 ---
 
@@ -25,70 +22,25 @@ This portfolio is a modern React-based web application built with a focus on imm
 | Layer | Technologies |
 | :--- | :--- |
 | **Frontend** | React 18, TypeScript, Vite |
-| **Styling** | Tailwind CSS, shadcn/ui, Radix UI |
-| **Animation** | Framer Motion, GSAP |
-| **Scrolling** | Lenis Scroll, ScrollVelocity |
-| **Validation** | Zod, React Hook Form |
+| **Styling** | Tailwind CSS, CSS Custom Properties |
+| **Animation** | Framer Motion, GSAP, Canvas Particle FX |
+| **Scrolling** | Lenis Smooth Scroll |
 | **Icons** | Lucide React |
 
 ---
 
-## 📂 Project Structure
+## 💻 Getting Started Locally
 
-```text
-src/
-├── components/     # Reusable UI components (Navigation, StarBorder, etc.)
-├── pages/          # Layout sections (Hero, About, SelectedWorks, Contact)
-├── lib/            # Utility functions and library wrappers
-├── hooks/          # Custom React hooks
-└── assets/         # Static assets and styles
+```bash
+# Clone the repository
+git clone https://github.com/PiyushBadgujar/Portfolio.git
+
+# Navigate to project folder
+cd Portfolio
+
+# Install dependencies
+npm install
+
+# Start local development server
+npm run dev
 ```
-
----
-
-## 🛠️ Getting Started
-
-### Prerequisites
-- Node.js (v18 or higher)
-- npm or bun
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/MAHESHPPAI/portfolio-website.git
-   cd Portfolio-website
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   bun install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
-
----
-
-## 📬 Contact
-
-Let's build something intelligent.
-
-- **Email**: [maheshpailinked@gmail.com](mailto:maheshpailinked@gmail.com)
-- **Instagram**: [_.maheshhhhhh._](https://www.instagram.com/_.maheshhhhhh._/)
-- **Availability**: Currently available for freelance and full-time opportunities.
-
----
-
-<p align="center">
-  MADE BY MAHESH ® 2026
-</p>

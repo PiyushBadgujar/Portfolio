@@ -20,10 +20,9 @@ const navItems: NavItem[] = [
 ];
 
 const socialItems: SocialItem[] = [
-  { label: "GitHub", href: "https://github.com/MAHESHPPAI" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/mahesh-p-pai-b0987b2a8/" },
-  { label: "Instagram", href: "https://www.instagram.com/mahesh_3.14_/" },
-  { label: "Email", href: "mailto:maheshpailinked@gmail.com" },
+  { label: "GitHub", href: "https://github.com/piyushbadgujar05" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/piyushbadgujar/" },
+  { label: "Email", href: "mailto:pb875108@gmail.com" },
 ];
 
 const ease = [0.76, 0, 0.24, 1] as [number, number, number, number];
@@ -154,7 +153,7 @@ const Navigation = () => {
                 <motion.a
                   key={item.label}
                   href={item.href}
-                  target="_blank"
+                  target={item.href.startsWith("mailto") ? "_self" : "_blank"}
                   rel="noopener noreferrer"
                   custom={i}
                   variants={socialVariants}
@@ -203,7 +202,7 @@ const Navigation = () => {
               exit={{ opacity: 0, transition: { duration: 0.6 } }}
               className="text-xs text-white/20 font-mono tracking-widest mt-8 md:mt-0 md:self-end"
             >
-              © 2026 MAHESH
+              © 2026 PIYUSH BADGUJAR
             </motion.p>
           </motion.div>
         )}

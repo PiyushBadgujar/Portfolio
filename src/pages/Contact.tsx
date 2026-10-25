@@ -1,46 +1,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz6_hmNogiRhIAkAdfWU9q0wQb2WdEvswPCTHCd9U-giehtMTgKcmZq2NsQES-XYuxd/exec";
-
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [copied, setCopied] = useState(false);
 
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-
-    try {
-      // ✅ Send as URLSearchParams — no-cors mode drops JSON headers,
-      //    but form-encoded bodies are always forwarded correctly.
-      const body = new URLSearchParams(formData);
-
-      await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
-      });
-
-      setStatus("success");
-      setFormData({ firstName: "", lastName: "", email: "", subject: "", message: "" });
-    } catch {
-      setStatus("error");
-    }
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("pb875108@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   const containerVariants = {
@@ -73,100 +40,87 @@ const Contact = () => {
         <div className="lg:col-span-7 flex flex-col justify-between h-full py-2">
           <motion.div variants={itemVariants} className="mb-8 lg:mb-0">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] tracking-tight text-left">
-              Contact <br />
-              Me <span className="inline-block ml-2">→</span>
+              Let's Build <br />
+              Something <span className="inline-block ml-2">→</span>
             </h1>
           </motion.div>
 
           <motion.div variants={itemVariants} className="mt-8 lg:mt-0 hidden lg:block">
             <h2 className="text-xs font-bold uppercase tracking-widest mb-4 text-black/60">
-              Contact Form
+              Get In Touch
             </h2>
             <p className="text-base md:text-lg font-normal leading-relaxed text-black/80 max-w-md text-left">
-              Send me a message and I'll get back to you as soon as possible. Let's build something great together.
+              I'm interested in software development, full-stack engineering, and AI-powered applications. Feel free to connect about opportunities, collaborations, or interesting projects.
             </p>
           </motion.div>
         </div>
 
-        {/* Right Column: Form */}
-        <motion.div className="lg:col-span-5 flex flex-col justify-center" variants={itemVariants}>
-          <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
+        {/* Right Column: Contact Details */}
+        <motion.div className="lg:col-span-5 flex flex-col justify-center gap-8" variants={itemVariants}>
 
-            {/* Name */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex flex-col gap-1">
-                <label htmlFor="firstName" className="text-xs font-bold uppercase tracking-wider">First Name*</label>
-                <input
-                  type="text" id="firstName" name="firstName"
-                  value={formData.firstName} onChange={handleChange}
-                  className="w-full bg-transparent border-b border-black/30 py-1 text-lg font-medium focus:border-black focus:outline-none transition-colors"
-                  required
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor="lastName" className="text-xs font-bold uppercase tracking-wider">Last Name*</label>
-                <input
-                  type="text" id="lastName" name="lastName"
-                  value={formData.lastName} onChange={handleChange}
-                  className="w-full bg-transparent border-b border-black/30 py-1 text-lg font-medium focus:border-black focus:outline-none transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Email & Subject */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex flex-col gap-1">
-                <label htmlFor="email" className="text-xs font-bold uppercase tracking-wider">Email*</label>
-                <input
-                  type="email" id="email" name="email"
-                  value={formData.email} onChange={handleChange}
-                  className="w-full bg-transparent border-b border-black/30 py-1 text-lg font-medium focus:border-black focus:outline-none transition-colors"
-                  required
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor="subject" className="text-xs font-bold uppercase tracking-wider">Subject*</label>
-                <input
-                  type="text" id="subject" name="subject"
-                  value={formData.subject} onChange={handleChange}
-                  className="w-full bg-transparent border-b border-black/30 py-1 text-lg font-medium focus:border-black focus:outline-none transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Message */}
-            <div className="flex flex-col gap-1">
-              <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider">Message*</label>
-              <textarea
-                id="message" name="message" rows={3}
-                value={formData.message} onChange={handleChange}
-                className="w-full bg-transparent border-b border-black/30 py-1 text-lg font-medium focus:border-black focus:outline-none transition-colors resize-none"
-                required
-              />
-            </div>
-
-            {/* Submit */}
-            <div className="mt-4 flex flex-col gap-2">
-              <button
-                type="submit"
-                disabled={status === "sending"}
-                className="group flex items-center gap-3 text-lg font-bold uppercase tracking-wider hover:text-black/70 transition-colors disabled:opacity-50"
+          {/* Email */}
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-black/50">Email</span>
+            <div className="flex items-center gap-4">
+              <a
+                href="mailto:pb875108@gmail.com"
+                className="text-xl md:text-2xl font-bold hover:opacity-60 transition-opacity duration-300"
               >
-                {status === "sending" ? "Sending…" : "Send Message"}
-                <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
+                pb875108@gmail.com
+              </a>
+              <button
+                onClick={handleCopyEmail}
+                className="group flex items-center gap-1 text-xs font-bold uppercase tracking-wider border border-black/20 px-3 py-1.5 hover:bg-black hover:text-white hover:border-black transition-all duration-300"
+                title="Copy email"
+              >
+                {copied ? "Copied ✓" : "Copy"}
               </button>
-
-              {status === "success" && (
-                <p className="text-sm text-green-600 font-medium">✓ Message sent! I'll get back to you soon.</p>
-              )}
-              {status === "error" && (
-                <p className="text-sm text-red-500 font-medium">✗ Something went wrong. Please try again.</p>
-              )}
             </div>
+          </div>
 
-          </form>
+          {/* Divider */}
+          <div className="w-full h-[1px] bg-black/10" />
+
+          {/* LinkedIn */}
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-black/50">LinkedIn</span>
+            <a
+              href="https://www.linkedin.com/in/piyushbadgujar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl md:text-2xl font-bold hover:opacity-60 transition-opacity duration-300 flex items-center gap-2"
+            >
+              /in/piyushbadgujar
+              <span className="text-base">↗</span>
+            </a>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-[1px] bg-black/10" />
+
+          {/* GitHub */}
+          <div className="flex flex-col gap-2">
+            <span className="text-xs font-bold uppercase tracking-wider text-black/50">GitHub</span>
+            <a
+              href="https://github.com/piyushbadgujar05"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl md:text-2xl font-bold hover:opacity-60 transition-opacity duration-300 flex items-center gap-2"
+            >
+              /piyushbadgujar05
+              <span className="text-base">↗</span>
+            </a>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-[1px] bg-black/10" />
+
+          {/* Location */}
+          <div className="flex flex-col gap-1">
+            <span className="text-xs font-bold uppercase tracking-wider text-black/50">Location</span>
+            <p className="text-base font-medium text-black/70">Pune, Maharashtra, India</p>
+          </div>
+
         </motion.div>
       </motion.div>
     </section>
